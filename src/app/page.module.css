@@ -2,12 +2,58 @@
   width: 100vw;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: calc(100dvh - 100px);
+  background: rgb(55,52,198);
+  background: -moz-linear-gradient(149deg, rgba(55,52,198,1) 0%, rgba(44,40,215,1) 6%, rgba(89,92,226,1) 100%);
+  background: -webkit-linear-gradient(149deg, rgba(55,52,198,1) 0%, rgba(44,40,215,1) 6%, rgba(89,92,226,1) 100%);
+  background: linear-gradient(149deg, rgba(55,52,198,1) 0%, rgba(44,40,215,1) 6%, rgba(89,92,226,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3734c6",endColorstr="#595ce2",GradientType=1); 
+  color: white;
 }
 
-#hero img {
-  width: 100vw;
-  max-width: 1280px;
-  margin: 0 auto;
+#hero div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 70px;
+  font-family: var(--font-agrandir-bold);
+  height: fit-content;
+  z-index: 99;
+}
+
+#hero div h1 {
+  margin-bottom: 0;
+  height: fit-content;
+  line-height: 135px;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+#hero div h1:nth-of-type(1) {
+  animation: textIn 1s ease-in-out forwards;
+}
+#hero div h1:nth-of-type(2) {
+  animation: textIn 1s 250ms ease-in-out forwards;
+}
+#hero div h1:nth-of-type(3) {
+  animation: textIn 1s 500ms ease-in-out forwards;
+}
+
+#hero button {
+  color: white;
+  border: solid white 3px;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 15px 50px;
+  z-index: 99;
+}
+
+#hero button:hover,
+#hero button:focus {
+  background-color: white;
+  color: #4949de;
 }
 
 #about {
@@ -20,4 +66,17 @@
   margin: 10px auto;
   text-align: center;
   gap: 5px;
+}
+
+
+@keyframes textIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

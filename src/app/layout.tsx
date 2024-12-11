@@ -2,15 +2,17 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const agrandirReg = localFont({
+  src: "./fonts/Agrandir-Regular.otf",
+  variable: "--font-agrandir-regular"
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const agrandirBold = localFont({
+  src: "./fonts/Agrandir-TextBold.otf",
+  variable: "--font-agrandir-bold"
+});
+const agrandirGrandHeavy = localFont({
+  src: "./fonts/Agrandir-GrandHeavy.otf",
+  variable: "--font-agrandir-grandheavy"
 });
 
 export const metadata: Metadata = {
@@ -25,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${agrandirReg.variable} ${agrandirBold.variable} ${agrandirGrandHeavy.variable}`}>
         {children}
       </body>
     </html>

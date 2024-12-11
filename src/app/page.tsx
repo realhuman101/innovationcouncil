@@ -10,10 +10,15 @@ export default function Home() {
       <Header/>
 
       <div id={styles.hero}>
-        <img src={heroImg.src} alt="heroImg"/>
+        <div id={styles.heroTitles}>
+          <h1>Student</h1>
+          <h1>Innovation</h1>
+          <h1>Council</h1>
+        </div>
+        <button>Join Us Now!</button>
       </div>
 
-      <div id={styles.about}>
+      <div id={styles.purpose}>
           <h2>The Interschool Student Innovation Council</h2>
           <p>Are you interested in making an impact on our community?</p>
           <p/>

@@ -12,7 +12,10 @@ function Header() {
 				Innovation Council
 			</div>
 			<div>
-
+				<a href="">Projects</a>
+				<a href="">Leaderboard</a>
+				<a href="">Schedule</a>
+				<a href="">Get In Touch</a>
 			</div>
 		</div>
 	</>
