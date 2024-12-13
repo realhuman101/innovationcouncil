@@ -2,17 +2,25 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const agrandirReg = localFont({
-  src: "./fonts/Agrandir-Regular.otf",
-  variable: "--font-agrandir-regular"
+const heavy = localFont({
+  src: "./fonts/Coolvetica Hv Comp.otf",
+  variable: "--font-coolvetica-heavy"
 });
-const agrandirBold = localFont({
-  src: "./fonts/Agrandir-TextBold.otf",
-  variable: "--font-agrandir-bold"
+const regular = localFont({
+  src: "./fonts/Coolvetica Rg.otf",
+  variable: "--font-coolvetica-reg"
 });
-const agrandirGrandHeavy = localFont({
-  src: "./fonts/Agrandir-GrandHeavy.otf",
-  variable: "--font-agrandir-grandheavy"
+const regularItalic = localFont({
+  src: "./fonts/Coolvetica Rg It.otf",
+  variable: "--font-coolvetica-regIt"
+});
+const regularCram = localFont({
+  src: "./fonts/Coolvetica Rg Cram.otf",
+  variable: "--font-coolvetica-regCram"
+});
+const regularCond = localFont({
+  src: "./fonts/Coolvetica Rg Cond.otf",
+  variable: "--font-coolvetica-regCond"
 });
 
 export const metadata: Metadata = {
@@ -27,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${agrandirReg.variable} ${agrandirBold.variable} ${agrandirGrandHeavy.variable}`}>
+      <body className={`${heavy.variable} ${regular.variable} ${regularItalic.variable} ${regularCram.variable} ${regularCond.variable}`}>
         {children}
       </body>
     </html>

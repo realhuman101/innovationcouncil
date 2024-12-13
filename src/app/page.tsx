@@ -7,7 +7,7 @@ export default function Home() {
     <div className={styles.page}>
       <Header/>
 
-      <div id={styles.hero}>
+      <section id={styles.hero} className="blueBg">
         <video src="/heroVideo.mp4" disablePictureInPicture playsInline autoPlay loop muted/>
         <div id={styles.heroTitles}>
           <h1>Student</h1>
@@ -15,11 +15,226 @@ export default function Home() {
           <h1>Council</h1>
         </div>
         <button>Join Us Now!</button>
-      </div>
+      </section>
 
-      <div id={styles.purpose}>
-         
-      </div>
+      <section id={styles.purpose}>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>Our Purpose</h1>
+          <p>sdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+         <div>
+          <h1>asdf</h1>
+          <p>asdf</p>
+         </div>
+      </section>
       {/* <Footer/> */}
     </div>
   );
