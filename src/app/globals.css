@@ -38,7 +38,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 9999;
   background-color: transparent;
   color: var(--background);
   display: flex;
@@ -84,6 +84,36 @@ a {
   margin: auto 0;
   text-align: center;
   transition: letter-spacing 250ms;
+}
+
+#header div a:nth-of-type(1) {
+  animation: textIn 250ms ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(100px);;
+}
+
+#header div a:nth-of-type(2) {
+  animation: textIn 250ms ease-in-out 100ms forwards;
+  opacity: 0;
+  transform: translateY(100px);;
+}
+
+#header div a:nth-of-type(3) {
+  animation: textIn 250ms ease-in-out 200ms forwards;
+  opacity: 0;
+  transform: translateY(100px);;
+}
+
+#header div a:nth-of-type(4) {
+  animation: textIn 250ms ease-in-out 300ms forwards;
+  opacity: 0;
+  transform: translateY(100px);;
+}
+
+#header div a:nth-of-type(5) {
+  animation: textIn 250ms ease-in-out 400ms forwards;
+  opacity: 0;
+  transform: translateY(100px);;
 }
 
 #header div a:hover {
@@ -154,7 +184,7 @@ button:focus {
 }
 
 #hamburgerIcon input {
-  display: none;
+  opacity: 0;
 }
 
 #hamburgerIcon svg {

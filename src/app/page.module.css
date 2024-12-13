@@ -30,6 +30,13 @@
   pointer-events: none;
   position: absolute;
   opacity: 0.6;
+  width: 100vw;
+}
+
+@media (max-width: 850px) {
+  #hero video {
+    width: 850px;
+  }
 }
 
 #hero div {
@@ -89,6 +96,8 @@
   font-size: 17px;
   padding: 15px 50px;
   z-index: 999;
+  opacity: 0;
+  animation: textIn 1s 500ms ease-in-out forwards;
 }
 
 #hero button:hover,
@@ -97,16 +106,31 @@
   color: #0e5fe1;
 }
 
-#about {
-  color: #0e5fe1;
+#purpose {
+  position: relative;
+  height: 750px;
+  background-color: #fff8f8;
+  background-position: center;
+  background-size: calc(100vw - 70px);
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 740px) {
+  #purpose {
+    background-size: 740px;
+  }
+}
+
+@media (min-width: 1300px) {
+  #purpose {
+    background-size: 1300px;
+  }
+}
+
+#purpose div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 10px auto;
-  text-align: center;
-  gap: 5px;
 }
 
 @keyframes textIn {
