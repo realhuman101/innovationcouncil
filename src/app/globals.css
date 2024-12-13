@@ -31,18 +31,16 @@ a {
   text-decoration: none;
 }
 
-#headerFill, #header {
-  height: 50px;
-  width: 100dvw;
-}
-
 #header {
+  height: 70px;
+  width: 100dvw;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: var(--background);
+  background-color: transparent;
+  color: var(--background);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,6 +48,7 @@ a {
   text-align: center;
   padding: 10px;
   margin: 0;
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 
 #header div {
@@ -63,6 +62,11 @@ a {
   letter-spacing: 1px;
 }
 
+#header div img {
+  border-radius: 50px;
+  animation: imgIn 250ms ease-in-out;
+}
+
 #header div:first-of-type {
   margin-right: auto;
 }
@@ -70,7 +74,8 @@ a {
 #header div:last-of-type {
   margin-left: auto;
   justify-content: space-between;
-  padding: 0 10px;
+  padding-right: 10px;
+  min-width: 700px;
 }
 
 #header div a {
@@ -125,4 +130,26 @@ button:focus {
   background-color: var(--foreground);
   color: var(--background);
   cursor: pointer;
+}
+
+@keyframes textIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes imgIn {
+  from {
+    transform: translateY(20px);
+  }
+
+  to {
+    transform: translateY(0px); 
+  }
 }

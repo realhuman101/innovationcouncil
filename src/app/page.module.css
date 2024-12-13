@@ -4,31 +4,69 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  height: calc(100dvh - 100px);
+  height: 100dvh;
+  max-height: 750px;
   background: rgb(55,52,198);
-  background: -moz-linear-gradient(149deg, rgba(55,52,198,1) 0%, rgba(44,40,215,1) 6%, rgba(89,92,226,1) 100%);
-  background: -webkit-linear-gradient(149deg, rgba(55,52,198,1) 0%, rgba(44,40,215,1) 6%, rgba(89,92,226,1) 100%);
-  background: linear-gradient(149deg, rgba(55,52,198,1) 0%, rgba(44,40,215,1) 6%, rgba(89,92,226,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3734c6",endColorstr="#595ce2",GradientType=1); 
+  background: -moz-linear-gradient(150deg, #2d55d9 0%, #2d56d6 100%);
+  background: -webkit-linear-gradient(150deg, #2d55d9 0%, #2d56d6 100%);
+  background: linear-gradient(150deg, #2d55d9 0%, #2d56d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2d55d9",endColorstr="#2d56d6",GradientType=1); 
   color: white;
+  padding-top: 50px;
+  background-size: 100vw;
+  overflow: hidden;
+  background-position-y: bottom;
+  position: relative;
+}
+
+@media (max-width: 750px) {
+  #hero {
+    background-size: 750px;
+  }
+}
+
+#hero video {
+  z-index: 5;
+  pointer-events: none;
+  position: absolute;
 }
 
 #hero div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 70px;
+  font-size: 7vw;
   font-family: var(--font-agrandir-bold);
   height: fit-content;
-  z-index: 99;
+  z-index: 999;
 }
 
 #hero div h1 {
   margin-bottom: 0;
   height: fit-content;
-  line-height: 135px;
+  line-height: 12vw;
   opacity: 0;
   transform: translateY(100px);
+}
+
+@media (min-width: 1000px) {
+  #hero div {
+    font-size: 70px;
+  }
+
+  #hero div h1 {
+    line-height: 120px;
+  }
+}
+
+@media (max-width: 440px) {
+  #hero div {
+    font-size: 30px;
+  }
+
+  #hero div h1 {
+    line-height: 50px;
+  }
 }
 
 #hero div h1:nth-of-type(1) {
@@ -47,7 +85,7 @@
   border-radius: 50px;
   font-size: 20px;
   padding: 15px 50px;
-  z-index: 99;
+  z-index: 999;
 }
 
 #hero button:hover,
@@ -67,7 +105,6 @@
   text-align: center;
   gap: 5px;
 }
-
 
 @keyframes textIn {
   from {

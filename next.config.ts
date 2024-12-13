@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import loadConfig from "next/dist/server/config";
 
 const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
@@ -8,7 +9,8 @@ const nextConfig = {
   },
   assetPrefix: isProd ? '/innovationcouncil/' : '',
   basePath: isProd ? '/innovationcouncil' : '',
-  output: 'export'
+  output: 'export',
+  
 };
 
 export default nextConfig;
