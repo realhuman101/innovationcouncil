@@ -87,31 +87,31 @@ a {
 }
 
 #header div a:nth-of-type(1) {
-  animation: textIn 250ms ease-in-out forwards;
+  animation: textIn 500ms ease-in-out forwards;
   opacity: 0;
   transform: translateY(100px);;
 }
 
 #header div a:nth-of-type(2) {
-  animation: textIn 250ms ease-in-out 100ms forwards;
+  animation: textIn 500ms ease-in-out 100ms forwards;
   opacity: 0;
   transform: translateY(100px);;
 }
 
 #header div a:nth-of-type(3) {
-  animation: textIn 250ms ease-in-out 200ms forwards;
+  animation: textIn 500ms ease-in-out 200ms forwards;
   opacity: 0;
   transform: translateY(100px);;
 }
 
 #header div a:nth-of-type(4) {
-  animation: textIn 250ms ease-in-out 300ms forwards;
+  animation: textIn 500ms ease-in-out 300ms forwards;
   opacity: 0;
   transform: translateY(100px);;
 }
 
 #header div a:nth-of-type(5) {
-  animation: textIn 250ms ease-in-out 400ms forwards;
+  animation: textIn 500ms ease-in-out 400ms forwards;
   opacity: 0;
   transform: translateY(100px);;
 }
@@ -219,6 +219,67 @@ button:focus {
   stroke-dashoffset: -32.42;
 }
 
+#loader {
+  position: absolute;
+  z-index: 999999999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cfe6ff;
+  top: 0;
+  left: 0;
+}
+
+#loader svg {
+  width: 3.25em;
+  transform-origin: center;
+  animation: rotateFull 2s linear infinite;
+}
+ 
+#loader circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dashLoader 1.5s ease-in-out infinite;
+}
+
+@keyframes rotateFull {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dashLoader {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: -100vh;
+  }
+} 
+
 @keyframes textIn {
   from {
     opacity: 0;
@@ -238,5 +299,15 @@ button:focus {
 
   to {
     transform: translateY(0px); 
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
