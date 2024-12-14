@@ -1,3 +1,7 @@
+/* --------- */
+/* HERO SECT */
+/* --------- */
+
 #hero {
   width: 100vw;
   display: flex;
@@ -32,7 +36,7 @@
   opacity: 0.6;
   width: 100vw;
   filter: blur(0px);
-  animation: blurIn 500ms ease-in-out forwards;
+  animation: blurIn 1s ease-in-out forwards;
 }
 
 @media (max-width: 1180px) {
@@ -51,7 +55,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 12vw;
+  font-size: 15vw;
   font-family: var(--font-coolvetica-reg);
   height: fit-content;
   z-index: 999;
@@ -60,7 +64,7 @@
 #hero div h1 {
   margin-bottom: 0;
   height: fit-content;
-  line-height: 15vw;
+  line-height: 17vw;
   opacity: 0;
   transform: translateY(100px);
   font-weight: lighter;
@@ -69,21 +73,21 @@
 
 @media (min-width: 1000px) {
   #hero div {
-    font-size: 120px;
+    font-size: 150px;
   }
 
   #hero div h1 {
-    line-height: 140px;
+    line-height: 170px;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 340px) {
   #hero div {
-    font-size: 45px;
+    font-size: 51px;
   }
 
   #hero div h1 {
-    line-height: 55px;
+    line-height: 58px;
   }
 }
 
@@ -101,7 +105,7 @@
   color: white;
   border: solid white 3px;
   border-radius: 50px;
-  font-size: 17px;
+  font-size: 23px;
   padding: 15px 50px;
   z-index: 999;
   opacity: 0;
@@ -113,6 +117,10 @@
   background-color: white;
   color: #0e5fe1;
 }
+
+/* ------------ */
+/* PURPOSE SECT */
+/* ------------ */
 
 #purpose {
   position: relative;
@@ -140,6 +148,10 @@
   flex-direction: row;
   align-items: center;
 }
+
+/* ---------- */
+/* ANIMATIONS */
+/* ---------- */
 
 @keyframes textIn {
   from {

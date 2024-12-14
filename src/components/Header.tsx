@@ -22,7 +22,7 @@ function Header() {
 	}, []);
 
 	return (
-		size[0] >= 845 ? 
+		size[0] >= 1040 ? 
 		
 		// Main Header
 		<div id="header" 
@@ -39,7 +39,7 @@ function Header() {
 			}}
 		>
 			<div>
-				<img src={LogoImg.src} alt="Innovation Council Logo" width="45" height="45"/>
+				<img src={LogoImg.src} alt="Innovation Council Logo" width="50" height="50"/>
 			</div>
 			<div>
 				<a href="">Positions Open</a>

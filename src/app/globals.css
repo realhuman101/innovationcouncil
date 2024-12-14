@@ -84,6 +84,7 @@ a {
   margin: auto 0;
   text-align: center;
   transition: letter-spacing 250ms;
+  font-size: 25px;
 }
 
 #header div a:nth-of-type(1) {
