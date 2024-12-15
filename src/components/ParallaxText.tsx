@@ -10,6 +10,7 @@ import {
   useVelocity,
   useAnimationFrame
 } from "framer-motion";
+import { wrap } from "@motionone/utils";
 
 interface ParallaxProps {
   children: ReactNode;
@@ -37,7 +38,7 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
       if (scrollerRef.current && containerRef.current) {
         const viewportWidth = containerRef.current.offsetWidth;
         const contentWidth = scrollerRef.current.children[0].clientWidth;
-        const requiredSpans = Math.ceil((viewportWidth * 4) / contentWidth) + 3;
+        const requiredSpans = Math.ceil((viewportWidth * 2.5) / contentWidth) + 1;
         setSpanCount(requiredSpans);
       }
     };
@@ -47,24 +48,20 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
     return () => window.removeEventListener('resize', calculateSpans);
   }, [children]);
 
-  const wrappedX = useRef(0);
+  const directionFactor = useRef<number>(baseVelocity > 0 ? 1 : -1);
   
-  useAnimationFrame((time, delta) => {
-    if (!delta) return;
+  useAnimationFrame((t, delta) => {
+    let moveBy = baseVelocity * (delta / 1000);
 
-    let currentVelocity = baseVelocity;
-    if (velocityFactor.get() !== 0) {
-      currentVelocity *= velocityFactor.get();
+    if (velocityFactor.get() < 0) {
+      moveBy *= -1;
     }
 
-    wrappedX.current -= (currentVelocity * delta) / 1000;
-
-    if (wrappedX.current <= -100) {
-      wrappedX.current = 0;
-    }
-    
-    baseX.set(wrappedX.current);
+    moveBy += moveBy * velocityFactor.get();
+    baseX.set(baseX.get() + moveBy);
   });
+
+  const x = useTransform(baseX, (v) => `${wrap(-25, -50, v)}%`);
 
   return (
     <div className="parallax" ref={containerRef}>
@@ -84,35 +81,27 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
           white-space: nowrap;
           flex-wrap: nowrap;
           align-items: center;
-          will-change: transform;
-          transform: translateZ(0);
-          backface-visibility: hidden;
         }
 
         .parallax .content-wrapper {
           display: flex;
           align-items: center;
-          flex-shrink: 0;
-          transform: translateZ(0);
+          padding: 0 15px;
         }
 
         .parallax img {
           width: auto;
           object-fit: cover;
+          margin: 0 10px;
         }
 
         .parallax .text {
           display: inline-flex;
           align-items: center;
-          transform: translateZ(0);
         }`}
       </style>
 
-      <motion.div 
-        className="scroller" 
-        style={{ x: baseX }}
-        ref={scrollerRef}
-      >
+      <motion.div className="scroller" style={{ x }} ref={scrollerRef}>
         {Array.from({ length: spanCount }, (_, i) => (
           <div key={i} className="content-wrapper">
             {children}

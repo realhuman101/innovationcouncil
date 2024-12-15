@@ -7,7 +7,6 @@ import missionIcon from "@/imgs/icon-mission.svg";
 import visionIcon from "@/imgs/icon-vision.svg";
 
 import purposeImg from '@/imgs/purpose.webp'
-import { p } from "framer-motion/client";
 
 export default function Home() {
 	return (
@@ -15,7 +14,7 @@ export default function Home() {
 			<Header/>
 
 			<section id={styles.hero} className="blueBg">
-				<video src="/heroVideo.mp4" disablePictureInPicture playsInline autoPlay loop muted/>
+				<video src="heroVideo.mp4" disablePictureInPicture playsInline autoPlay loop muted/>
 				<div id={styles.heroTitles}>
 					<h1>Student</h1>
 					<h1>Innovation</h1>
