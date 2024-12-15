@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 
-import LogoImg from '@/imgs/logo.png'
+import LogoImg from '@/imgs/logo.svg'
 
 function Header() {
 	const [state, changeState] = useState(false);
@@ -21,6 +21,7 @@ function Header() {
 		}
 		
 		updateSize()
+		changeState((document.documentElement.clientHeight ? document.documentElement : document.body).scrollTop != 0)
 		
 		window.addEventListener('scroll', () => {changeState((document.documentElement.clientHeight ? document.documentElement : document.body).scrollTop != 0)});
 
@@ -45,7 +46,7 @@ function Header() {
 			}}
 		>
 			<div>
-				<img src={LogoImg.src} alt="Innovation Council Logo" width="50" height="50"/>
+				<a href="/"><img src={LogoImg.src} alt="Innovation Council Logo" width="50" height="50"/></a>
 			</div>
 			<div>
 				<a href="">Positions Open</a>

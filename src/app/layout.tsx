@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+import favicon from '@/imgs/favicon.ico'
+
 const heavy = localFont({
   src: "./fonts/Coolvetica Hv Comp.otf",
   variable: "--font-coolvetica-heavy"
@@ -34,10 +36,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${heavy.variable} ${regular.variable} ${regularItalic.variable} ${regularCram.variable} ${regularCond.variable}`}>
-        {children}
-      </body>
-    </html>
+    <>
+      <html lang="en">
+        <head>
+          <link rel="icon" href={favicon.src} type="image/x-icon" />
+        </head>
+        <body className={`${heavy.variable} ${regular.variable} ${regularItalic.variable} ${regularCram.variable} ${regularCond.variable}`}>
+          {children}
+        </body>
+      </html>
+    </>
   );
 }

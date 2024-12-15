@@ -12,6 +12,8 @@
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
+    "@motionone/utils": "^10.18.0",
+    "framer-motion": "^11.14.4",
     "motion": "^11.14.1",
     "next": "15.0.4",
     "react": "^19.0.0",
