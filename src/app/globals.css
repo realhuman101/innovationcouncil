@@ -3,6 +3,7 @@
   --foreground: #150e60;
   --light-background: #cfe6ff;
   --dark-background: #473dc6;
+  --video-size: 100dvh;
 }
 
 html,

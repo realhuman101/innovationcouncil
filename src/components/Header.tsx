@@ -6,12 +6,18 @@ import LogoImg from '@/imgs/logo.png'
 
 function Header() {
 	const [state, changeState] = useState(false);
-	const [size, setSize] = useState([845, 0]);
+	const [size, setSize] = useState([1040, 0]);
 	const hRef = useRef(null);
 
 	useEffect( () => {
 		function updateSize() {
-			setSize([window.innerWidth, window.innerHeight]);
+			const [width, height] = [window.innerWidth, window.innerHeight];
+			
+			setSize([width, height]);
+		
+			const vidSize = '100d' + (width > height ? 'vw' : 'vh');
+
+			document.documentElement.style.setProperty('--video-size', vidSize)
 		}
 		
 		updateSize()

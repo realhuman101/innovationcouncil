@@ -2,6 +2,9 @@ import styles from "./page.module.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+import missionIcon from "@/imgs/icon-mission.svg";
+import visionIcon from "@/imgs/icon-vision.svg";
+
 import purposeImg from '@/imgs/purpose.webp'
 
 export default function Home() {
@@ -22,6 +25,16 @@ export default function Home() {
 			<section id={styles.purpose} style={{backgroundImage: `url(${purposeImg.src})`}}>
 					<div>
 						<div>
+							<img src={missionIcon.src} />
+							<h1>Our Purpose</h1>
+							<p>sdf</p>
+						</div>
+						<div>
+							<h1>Our Purpose</h1>
+							<p>sdf</p>
+						</div>
+						<div>
+							<img src={visionIcon.src} />
 							<h1>Our Purpose</h1>
 							<p>sdf</p>
 						</div>
